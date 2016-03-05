@@ -9,7 +9,7 @@ void setup() {
 }
 
 void loop() {
-  Sensor.Sense();//It need to be called in the loop function
+  Sensor.sense();//It need to be called in the loop function
 
   if (millis() - previusmillis > 2000) {
     Serial.println("Value: " + String(Sense.getValue()));
