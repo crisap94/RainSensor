@@ -18,6 +18,7 @@ private:
   uint8_t analogPin;
   uint8_t interval;
   uint16_t value;
+  uint8_t iterator;
   uint16_t data[MAX_DATA_COLLECTED];
   uint32_t previusMillis;
 
@@ -25,19 +26,7 @@ private:
 public:
   RainSensor(uint8_t analogPin, uint8_t interval = 120);
 
-  void Sense();
-
-  inline * getData(){
-    return data;
-  }
-
-  inline void setData(uint16_t data[MAX_DATA_COLLECTED]){
-    this->data=data;
-  }
-
-  inline void setPin(uint8_t analogPin){
-    this->analogPin = analogPin;
-  }
+  void sense();
 
   inline uint16_t getValue(){
     return this->value;
