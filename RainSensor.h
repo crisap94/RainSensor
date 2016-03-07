@@ -6,9 +6,20 @@
  */
 
 #ifndef MAX_DATA_COLLECTED
-#define MAX_DATA_COLLECTED 5
+#define MAX_DATA_COLLECTED 10
 #endif
 
+#ifndef WET
+#define WET 2
+#endif
+
+##ifndef DAMP
+#define DAMP 1
+#endif
+
+#ifndef DRY
+#define DRY 0
+#endif
 
  #include "Arduino.h"
 
@@ -18,8 +29,6 @@ private:
   uint8_t analogPin;
   uint8_t interval;
   uint16_t value;
-  uint8_t iterator;
-  uint16_t data[MAX_DATA_COLLECTED];
   uint32_t previusMillis;
 
 
